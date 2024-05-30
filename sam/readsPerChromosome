@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+samFile=$1
+cat $samFile | awk '{ print $3 }' | sort | uniq -c > ./readsPerChromosome.txt
